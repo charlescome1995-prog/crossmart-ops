@@ -1,7 +1,7 @@
 {
   "engine": "B",
   "keyword": "batana oil",
-  "generated_at": "2026-06-22T19:23:32.340024",
+  "generated_at": "2026-06-22T19:55:45.230873",
   "traffic_radar": [
     {
       "asin": "B0DBLCYTZ6",
@@ -16,7 +16,13 @@
       "sp_ad_kw": 56,
       "video_ad_kw": 16,
       "brand_ad_kw": 161,
-      "ads_detail": {}
+      "ads_detail": {
+        "asin": "B0DBLCYTZ6",
+        "ad_groups": 522,
+        "sp_groups": 521,
+        "sbv_groups": 1,
+        "ad_campaigns": 378
+      }
     },
     {
       "asin": "B0CMXF1NK3",
@@ -31,7 +37,33 @@
       "sp_ad_kw": 72,
       "video_ad_kw": 12,
       "brand_ad_kw": 231,
-      "ads_detail": {}
+      "ads_detail": {
+        "asin": "B0CMXF1NK3",
+        "ad_groups": 9,
+        "sp_groups": 8,
+        "sbv_groups": 1,
+        "ad_campaigns": 8
+      }
+    },
+    {
+      "asin": "B0DW3YH4WH",
+      "product_title": "Batana Oil for Hair Growth, 100% Natural Pure Batana Oil Paste from Dr. Sebi Honduras, Prevents Hair Loss, Enhances Thic",
+      "total_kw": 935,
+      "natural_kw": 865,
+      "ad_kw": 87,
+      "recommend_kw": 201,
+      "natural_pct": 92.5,
+      "ad_pct": 9.3,
+      "recommend_pct": 21.5,
+      "sp_ad_kw": 87,
+      "video_ad_kw": 0,
+      "brand_ad_kw": 0,
+      "ads_detail": {
+        "asin": "B0DW3YH4WH",
+        "ad_groups": 20,
+        "sp_groups": 20,
+        "ad_campaigns": 20
+      }
     },
     {
       "asin": "B0DCX7628T",
@@ -46,7 +78,13 @@
       "sp_ad_kw": 347,
       "video_ad_kw": 464,
       "brand_ad_kw": 0,
-      "ads_detail": {}
+      "ads_detail": {
+        "asin": "B0DCX7628T",
+        "ad_groups": 64,
+        "sp_groups": 63,
+        "sbv_groups": 1,
+        "ad_campaigns": 61
+      }
     },
     {
       "asin": "B0DJ1THRXM",
@@ -61,7 +99,12 @@
       "sp_ad_kw": 24,
       "video_ad_kw": 0,
       "brand_ad_kw": 0,
-      "ads_detail": {}
+      "ads_detail": {
+        "asin": "B0DJ1THRXM",
+        "ad_groups": 98,
+        "sp_groups": 98,
+        "ad_campaigns": 96
+      }
     }
   ],
   "traffic_structure": [
@@ -90,6 +133,19 @@
       "sp_ad_kw": 72,
       "video_ad_kw": 12,
       "brand_ad_kw": 231
+    },
+    {
+      "asin": "B0DW3YH4WH",
+      "total_kw": 935,
+      "natural_kw": 865,
+      "recommend_kw": 201,
+      "ad_kw": 87,
+      "natural_pct": 92.5,
+      "recommend_pct": 21.5,
+      "ad_pct": 9.3,
+      "sp_ad_kw": 87,
+      "video_ad_kw": 0,
+      "brand_ad_kw": 0
     },
     {
       "asin": "B0DCX7628T",
@@ -125,28 +181,55 @@
         "sp_ad_kw": 56,
         "video_ad_kw": 16,
         "brand_ad_kw": 161,
-        "ad_pct": 39.8
+        "ad_pct": 39.8,
+        "ad_groups": 522,
+        "sp_groups": 521,
+        "sbv_groups": 1,
+        "ad_campaigns": 378
       },
       {
         "asin": "B0CMXF1NK3",
         "sp_ad_kw": 72,
         "video_ad_kw": 12,
         "brand_ad_kw": 231,
-        "ad_pct": 36.1
+        "ad_pct": 36.1,
+        "ad_groups": 9,
+        "sp_groups": 8,
+        "sbv_groups": 1,
+        "ad_campaigns": 8
+      },
+      {
+        "asin": "B0DW3YH4WH",
+        "sp_ad_kw": 87,
+        "video_ad_kw": 0,
+        "brand_ad_kw": 0,
+        "ad_pct": 9.3,
+        "ad_groups": 20,
+        "sp_groups": 20,
+        "sbv_groups": null,
+        "ad_campaigns": 20
       },
       {
         "asin": "B0DCX7628T",
         "sp_ad_kw": 347,
         "video_ad_kw": 464,
         "brand_ad_kw": 0,
-        "ad_pct": 57.9
+        "ad_pct": 57.9,
+        "ad_groups": 64,
+        "sp_groups": 63,
+        "sbv_groups": 1,
+        "ad_campaigns": 61
       },
       {
         "asin": "B0DJ1THRXM",
         "sp_ad_kw": 24,
         "video_ad_kw": 0,
         "brand_ad_kw": 0,
-        "ad_pct": 8.8
+        "ad_pct": 8.8,
+        "ad_groups": 98,
+        "sp_groups": 98,
+        "sbv_groups": null,
+        "ad_campaigns": 96
       }
     ],
     "own": [
@@ -165,31 +248,31 @@
     ]
   },
   "ai_diagnosis": {
-    "summary": "Own product shows healthy conversion at 15.25% and ~$20 AOV, but traffic is extremely limited with only 59 sessions and no ad spend, so the main issue is exposure, not conversion. Competitors are capturing demand through broad organic keyword coverage plus aggressive paid placements, especially video and brand ads.",
+    "summary": "Your product shows strong early conversion at 15.25%, but traffic is extremely low with only 59 sessions and no ad spend, so growth is currently visibility-limited. Competitors rely heavily on broad organic keyword coverage, while several are using aggressive Sponsored Products, video, and brand ads to capture hair/scalp itch-related demand.",
     "keyword_opportunities": [
-      "itchy scalp relief / anti-itch scalp treatment",
-      "dandruff relief scalp oil / dry scalp treatment",
-      "tea tree scalp oil / natural scalp care",
-      "batana oil for hair / fuller thicker-looking hair",
-      "natural anti-itch balm / skin itch relief ointment"
+      "itchy scalp relief / scalp itch relief",
+      "tea tree scalp treatment / dandruff scalp oil",
+      "anti itch ointment / anti itch balm",
+      "dry scalp relief / flaky scalp treatment",
+      "natural scalp care for irritation"
     ],
     "ad_strategy": [
-      "Launch SP exact and phrase campaigns around high-intent symptom terms such as itchy scalp relief, dry scalp treatment, dandruff relief, and anti-itch ointment.",
-      "Create a separate competitor-ASIN targeting campaign against low-ad-pressure competitors and test defensive pricing or coupon support.",
-      "Test Sponsored Brands Video if eligible, because the strongest competitor uses heavy video coverage with 464 video ad keywords.",
-      "Start with controlled bids and a target ACOS threshold, then scale keywords with orders while negating broad terms with clicks but no sales."
+      "Launch Sponsored Products auto campaign to mine converting search terms, then move winners into exact and phrase campaigns.",
+      "Build manual campaigns around high-intent itch-relief and scalp-relief terms instead of competing broadly on expensive hair growth terms first.",
+      "Test product targeting against competitors with high ad exposure, especially B0DCX7628T, B0DBLCYTZ6, and B0CMXF1NK3.",
+      "If Brand Registry is available, add Sponsored Brands Video for scalp itch/dandruff relief angles because competitor B0DCX7628T is already using video heavily."
     ],
     "organic_growth": [
-      "Rewrite title, bullets, and backend search terms to cover symptom, ingredient, and use-case keywords without making unsupported medical claims.",
-      "Add comparison-style images showing use scenarios, texture, size, and relief-focused benefits to preserve the already strong conversion rate.",
-      "Drive initial ranking through coupons, limited-time discounts, and review-building programs to convert paid traffic into organic keyword lift.",
-      "Track rank weekly for core keywords and prioritize organic gains on terms where competitors have high natural coverage but moderate ad pressure."
+      "Rewrite title, bullets, and backend search terms around itch relief, scalp relief, dry scalp, dandruff, tea tree, and natural soothing-care angles.",
+      "Improve main image and secondary images to clearly show use case, size, texture, application area, and before/after-style benefit framing without unsupported medical claims.",
+      "Drive initial review volume and maintain conversion above 12% to help organic ranking once traffic scales.",
+      "Create coupon or limited-time deal to increase click-through rate and support ranking gains during the first ad push."
     ],
     "alerts": [
-      "Lebanta B0DCX7628T is the most aggressive traffic buyer with 57.9% ad keyword coverage and heavy video advertising, likely raising CPCs on batana and hair-growth terms.",
-      "Batana Oil B0CMXF1NK3 has very strong organic coverage at 91.3%, making it difficult to displace without sustained sales velocity.",
-      "Natural Riches B0DJ1THRXM relies almost entirely on organic traffic, creating an opportunity for paid conquesting if the product positioning overlaps.",
-      "Avoid unverified hair-growth, dandruff-treatment, or medical cure claims in listing copy and ads to reduce compliance risk."
+      "B0DCX7628T is the most aggressive advertiser with 811 ad keywords and 464 video ad keywords, likely pushing up CPCs in the category.",
+      "B0CMXF1NK3 and B0DBLCYTZ6 combine strong organic coverage with heavy brand ad presence, making head terms difficult to win quickly.",
+      "B0DW3YH4WH has high recommendation share at 21.5% with low ad dependence, indicating strong algorithmic placement risk.",
+      "Your current no-ad strategy limits keyword discovery and ranking momentum despite good conversion."
     ]
   }
 }

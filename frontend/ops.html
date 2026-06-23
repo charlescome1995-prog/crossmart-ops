@@ -174,15 +174,20 @@ function structureBar(c){
 function renderAdComp(){
   var ac = DATA.ad_competition||{};
   var comps = ac.competitors||[], own = ac.own||[];
-  var h = '<table class="tbl"><thead><tr><th>ASIN</th><th>SP Ads</th><th>Video Ads</th><th>Brand Ads</th><th>Ad %</th></tr></thead><tbody>';
+  var h = '<table class="tbl"><thead><tr><th>ASIN</th><th>Ad Groups</th><th>SP</th><th>SBV</th><th>Campaigns</th><th>SP Kw</th><th>Video Kw</th><th>Brand Kw</th><th>Ad %</th></tr></thead><tbody>';
   comps.forEach(function(c){
     h += '<tr><td class="asin">' + esc(c.asin) + '</td>'
+       + '<td><b>' + num(c.ad_groups) + '</b></td>'
+       + '<td>' + num(c.sp_groups) + '</td>'
+       + '<td>' + num(c.sbv_groups) + '</td>'
+       + '<td>' + num(c.ad_campaigns) + '</td>'
        + '<td><span class="pill sp">' + num(c.sp_ad_kw) + '</span></td>'
        + '<td><span class="pill video">' + num(c.video_ad_kw) + '</span></td>'
        + '<td><span class="pill brand">' + num(c.brand_ad_kw) + '</span></td>'
        + '<td>' + pct(c.ad_pct) + '</td></tr>';
   });
   h += '</tbody></table>';
+  h += '<div class="hint" style="margin-top:6px;display:block">Ad Groups / SP / SBV / Campaigns = real ad-investment scale (Seller Sprite Ad Insights, 6-month). Kw columns = keyword-source breakdown.</div>';
   // 自家真实数据对比
   if(own.length){
     h += '<div style="margin-top:14px;font-size:12px;font-weight:600;color:#1d4ed8">Our Products — real metrics (Jike)</div>';

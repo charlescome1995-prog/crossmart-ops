@@ -120,48 +120,39 @@ def collect_reversing(br, asin, timeout=15):
 
 
 def collect_ads(br, asin, timeout=15):
-    """广告洞察：输入ASIN→查询→抓广告位/分布概要文本。"""
+    """广告洞察：输入ASIN→查询→提取投放概要。
+
+    广告洞察页不是 el-table，而是文本概要，核心句：
+      “该Listing在所选时间段内共计有：64个投放小组（63个SP、1个SBV），属于61个广告活动”
+    返回 dict：ad_groups / sp_groups / sbv_groups / sb_groups / ad_campaigns
+    """
     print(f"  [ads] 广告洞察: {asin}")
-    br.navigate(f"{SPRITE_BASE}/v3/ads-insights", wait_min=3, wait_max=5)
-    time.sleep(3)
-    js_input = '''(() => {
-        const inputs=[...document.querySelectorAll('input[type=text]')];
-        let t=inputs.find(i=>(i.placeholder||'').includes('ASIN')||(i.placeholder||'').includes('产品链接'));
-        if(!t) return 'no-input';
-        t.focus(); t.value=%s;
-        t.dispatchEvent(new Event('input',{bubbles:true}));
-        t.dispatchEvent(new Event('change',{bubbles:true}));
-        return 'ok';
-    })()''' % json.dumps(asin)
-    if br.eval(js_input) != 'ok':
-        return {'_error': 'no_input'}
-    time.sleep(1)
-    br.eval('''(() => {
-        const b=[...document.querySelectorAll('button,.el-button')].find(x=>(x.innerText||'').includes('立即查询'));
-        if(b){b.click();return 1;} return 0;
-    })()''')
+    # 直接导航到结果 URL（按周、6个月），比填表点击更稳
+    url = f"{SPRITE_BASE}/v3/ads-insights?q={asin}&marketId=1&interval=week&months=6&pageNum=1&pageSize=50"
+    br.navigate(url, wait_min=4, wait_max=6)
     time.sleep(8)
-    js_data = r'''(() => {
-        const out={ths:[],rows:[],kpis:[]};
-        document.querySelectorAll('th').forEach(t=>{const x=(t.innerText||'').trim();if(x)out.ths.push(x);});
-        out.ths=[...new Set(out.ths)].slice(0,30);
-        [...document.querySelectorAll('.el-table__row, tbody tr')].slice(0,5).forEach(r=>{
-            out.rows.push([...r.querySelectorAll('td')].map(c=>(c.innerText||'').trim().replace(/\n+/g,' ').slice(0,40)));
-        });
-        document.querySelectorAll('[class*=count], [class*=number], [class*=stat], [class*=kpi]').forEach(s=>{
-            const x=(s.innerText||'').trim(); if(x&&x.length<40) out.kpis.push(x);
-        });
-        out.kpis=[...new Set(out.kpis)].slice(0,20);
-        return JSON.stringify(out);
-    })()'''
-    raw = br.eval(js_data) or '{}'
-    try:
-        parsed = json.loads(raw)
-    except Exception:
-        parsed = {}
-    parsed['asin'] = asin
-    print(f"    广告表头 {len(parsed.get('ths',[]))} 列, 数据行 {len(parsed.get('rows',[]))}")
-    return parsed
+    txt = br.eval("document.body.innerText") or ""
+    data = {'asin': asin, 'ad_groups': 0, 'sp_groups': 0, 'sbv_groups': 0, 'sb_groups': 0, 'ad_campaigns': 0}
+    # 核心概要句解析
+    m = re.search(r'共计有：\s*([\d,]+)\s*个投放小组', txt)
+    if m:
+        data['ad_groups'] = _num(m.group(1))
+    # 括号内 SP/SBV/SB 拆解
+    paren = re.search(r'投放小组（([^）)]+)）', txt)
+    if paren:
+        seg = paren.group(1)
+        for key, pat in (('sp_groups', r'([\d,]+)\s*个SP'),
+                         ('sbv_groups', r'([\d,]+)\s*个SBV'),
+                         ('sb_groups', r'([\d,]+)\s*个SB(?!V)')):
+            mm = re.search(pat, seg)
+            if mm:
+                data[key] = _num(mm.group(1))
+    mc = re.search(r'属于\s*([\d,]+)\s*个广告活动', txt)
+    if mc:
+        data['ad_campaigns'] = _num(mc.group(1))
+    print(f"    投放小组={data.get('ad_groups','?')} SP={data.get('sp_groups','?')} "
+          f"SBV={data.get('sbv_groups','?')} 广告活动={data.get('ad_campaigns','?')}")
+    return data
 
 
 def run_step1(asins, with_ads=True):

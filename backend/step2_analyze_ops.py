@@ -165,7 +165,13 @@ def run_step2(keyword_label, raw_path=None, jike_data=None, with_ai=True):
         'ad_competition': {
             'competitors': [{'asin': c['asin'], 'sp_ad_kw': c['sp_ad_kw'],
                              'video_ad_kw': c['video_ad_kw'], 'brand_ad_kw': c['brand_ad_kw'],
-                             'ad_pct': c['ad_pct']} for c in competitors],
+                             'ad_pct': c['ad_pct'],
+                             # 广告洞察真实投放规模
+                             'ad_groups': (c.get('ads_detail') or {}).get('ad_groups'),
+                             'sp_groups': (c.get('ads_detail') or {}).get('sp_groups'),
+                             'sbv_groups': (c.get('ads_detail') or {}).get('sbv_groups'),
+                             'ad_campaigns': (c.get('ads_detail') or {}).get('ad_campaigns')}
+                            for c in competitors],
             'own': own,
         },
         'ai_diagnosis': ai,

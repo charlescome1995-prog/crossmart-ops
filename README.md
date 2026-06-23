@@ -9,9 +9,14 @@
 4. **🤖 AI Operations Diagnosis** — 火山方舟 LLM 输出抢词建议/广告优化/排名路径/预警
 
 ## 数据源
-- **卖家精灵**：查流量来源 `/v3/reversing` + 广告洞察 `/v3/ads-insights`（竞品运营数据）
+- **卖家精灵**：查流量来源 `/v3/reversing`（流量词结构）+ 广告洞察 `/v3/ads-insights`（真实投放规模：投放小组/SP/SBV/广告活动数，6个月）
 - **积加 API**：自家 ASIN 真实 ACOS / 广告花费 / Session / CVR
 - **火山方舟 LLM**：运营策略诊断
+
+## 定时抓取
+- Windows 任务计划 **CrossMartOps_0600**（每天 06:00）→ `_run_0600.bat` → `backend/scheduled_run.py`
+- 流程：确保 Edge 9225 → `run_ops.py --all` → 自动 git push frontend/data 触发 Pages 部署
+- 错开 monitor（monitor 是 0500/1100/2100）
 
 ## 用法
 ```bash
