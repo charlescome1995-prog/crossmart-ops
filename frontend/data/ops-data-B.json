@@ -1,0 +1,195 @@
+{
+  "engine": "B",
+  "keyword": "batana oil",
+  "generated_at": "2026-06-22T19:23:32.340024",
+  "traffic_radar": [
+    {
+      "asin": "B0DBLCYTZ6",
+      "product_title": "Botanic Hearth 100% Pure Tea Tree Scalp Oil for Hair Growth, Dandruff & Itchy Scalp Relief 6.7 Fl Oz | Infused with Coco",
+      "total_kw": 585,
+      "natural_kw": 442,
+      "ad_kw": 233,
+      "recommend_kw": 32,
+      "natural_pct": 75.6,
+      "ad_pct": 39.8,
+      "recommend_pct": 5.5,
+      "sp_ad_kw": 56,
+      "video_ad_kw": 16,
+      "brand_ad_kw": 161,
+      "ads_detail": {}
+    },
+    {
+      "asin": "B0CMXF1NK3",
+      "product_title": "Batana Oil - 100% Pure & Natural from Honduras for Hair Growth, Eliminates Split Ends, Enhances Radiance & Nourishment f",
+      "total_kw": 873,
+      "natural_kw": 797,
+      "ad_kw": 315,
+      "recommend_kw": 77,
+      "natural_pct": 91.3,
+      "ad_pct": 36.1,
+      "recommend_pct": 8.8,
+      "sp_ad_kw": 72,
+      "video_ad_kw": 12,
+      "brand_ad_kw": 231,
+      "ads_detail": {}
+    },
+    {
+      "asin": "B0DCX7628T",
+      "product_title": "Lebanta Raw Batana Oil for Hair - 100% Pure, Organic 4oz Batana from Honduras for Fuller, Thicker-Looking Hair - Unrefin",
+      "total_kw": 1401,
+      "natural_kw": 1161,
+      "ad_kw": 811,
+      "recommend_kw": 36,
+      "natural_pct": 82.9,
+      "ad_pct": 57.9,
+      "recommend_pct": 2.6,
+      "sp_ad_kw": 347,
+      "video_ad_kw": 464,
+      "brand_ad_kw": 0,
+      "ads_detail": {}
+    },
+    {
+      "asin": "B0DJ1THRXM",
+      "product_title": "Natural Riches Unrefined Organic Batana Oil, 8 fl oz, 100% Pure & Natural, Cold pressed Honduras Miracle Oil for Hair Gr",
+      "total_kw": 272,
+      "natural_kw": 271,
+      "ad_kw": 24,
+      "recommend_kw": 1,
+      "natural_pct": 99.6,
+      "ad_pct": 8.8,
+      "recommend_pct": 0.4,
+      "sp_ad_kw": 24,
+      "video_ad_kw": 0,
+      "brand_ad_kw": 0,
+      "ads_detail": {}
+    }
+  ],
+  "traffic_structure": [
+    {
+      "asin": "B0DBLCYTZ6",
+      "total_kw": 585,
+      "natural_kw": 442,
+      "recommend_kw": 32,
+      "ad_kw": 233,
+      "natural_pct": 75.6,
+      "recommend_pct": 5.5,
+      "ad_pct": 39.8,
+      "sp_ad_kw": 56,
+      "video_ad_kw": 16,
+      "brand_ad_kw": 161
+    },
+    {
+      "asin": "B0CMXF1NK3",
+      "total_kw": 873,
+      "natural_kw": 797,
+      "recommend_kw": 77,
+      "ad_kw": 315,
+      "natural_pct": 91.3,
+      "recommend_pct": 8.8,
+      "ad_pct": 36.1,
+      "sp_ad_kw": 72,
+      "video_ad_kw": 12,
+      "brand_ad_kw": 231
+    },
+    {
+      "asin": "B0DCX7628T",
+      "total_kw": 1401,
+      "natural_kw": 1161,
+      "recommend_kw": 36,
+      "ad_kw": 811,
+      "natural_pct": 82.9,
+      "recommend_pct": 2.6,
+      "ad_pct": 57.9,
+      "sp_ad_kw": 347,
+      "video_ad_kw": 464,
+      "brand_ad_kw": 0
+    },
+    {
+      "asin": "B0DJ1THRXM",
+      "total_kw": 272,
+      "natural_kw": 271,
+      "recommend_kw": 1,
+      "ad_kw": 24,
+      "natural_pct": 99.6,
+      "recommend_pct": 0.4,
+      "ad_pct": 8.8,
+      "sp_ad_kw": 24,
+      "video_ad_kw": 0,
+      "brand_ad_kw": 0
+    }
+  ],
+  "ad_competition": {
+    "competitors": [
+      {
+        "asin": "B0DBLCYTZ6",
+        "sp_ad_kw": 56,
+        "video_ad_kw": 16,
+        "brand_ad_kw": 161,
+        "ad_pct": 39.8
+      },
+      {
+        "asin": "B0CMXF1NK3",
+        "sp_ad_kw": 72,
+        "video_ad_kw": 12,
+        "brand_ad_kw": 231,
+        "ad_pct": 36.1
+      },
+      {
+        "asin": "B0DCX7628T",
+        "sp_ad_kw": 347,
+        "video_ad_kw": 464,
+        "brand_ad_kw": 0,
+        "ad_pct": 57.9
+      },
+      {
+        "asin": "B0DJ1THRXM",
+        "sp_ad_kw": 24,
+        "video_ad_kw": 0,
+        "brand_ad_kw": 0,
+        "ad_pct": 8.8
+      }
+    ],
+    "own": [
+      {
+        "asin": "B0FVSS8SR1",
+        "product_name": "60g瓶装止痒膏",
+        "orders": 9,
+        "units": 9,
+        "sales": 179.91,
+        "sessions": 59,
+        "cvr": 15.25,
+        "acos": 0.0,
+        "ad_spend": 0.0,
+        "rank": null
+      }
+    ]
+  },
+  "ai_diagnosis": {
+    "summary": "Own product shows healthy conversion at 15.25% and ~$20 AOV, but traffic is extremely limited with only 59 sessions and no ad spend, so the main issue is exposure, not conversion. Competitors are capturing demand through broad organic keyword coverage plus aggressive paid placements, especially video and brand ads.",
+    "keyword_opportunities": [
+      "itchy scalp relief / anti-itch scalp treatment",
+      "dandruff relief scalp oil / dry scalp treatment",
+      "tea tree scalp oil / natural scalp care",
+      "batana oil for hair / fuller thicker-looking hair",
+      "natural anti-itch balm / skin itch relief ointment"
+    ],
+    "ad_strategy": [
+      "Launch SP exact and phrase campaigns around high-intent symptom terms such as itchy scalp relief, dry scalp treatment, dandruff relief, and anti-itch ointment.",
+      "Create a separate competitor-ASIN targeting campaign against low-ad-pressure competitors and test defensive pricing or coupon support.",
+      "Test Sponsored Brands Video if eligible, because the strongest competitor uses heavy video coverage with 464 video ad keywords.",
+      "Start with controlled bids and a target ACOS threshold, then scale keywords with orders while negating broad terms with clicks but no sales."
+    ],
+    "organic_growth": [
+      "Rewrite title, bullets, and backend search terms to cover symptom, ingredient, and use-case keywords without making unsupported medical claims.",
+      "Add comparison-style images showing use scenarios, texture, size, and relief-focused benefits to preserve the already strong conversion rate.",
+      "Drive initial ranking through coupons, limited-time discounts, and review-building programs to convert paid traffic into organic keyword lift.",
+      "Track rank weekly for core keywords and prioritize organic gains on terms where competitors have high natural coverage but moderate ad pressure."
+    ],
+    "alerts": [
+      "Lebanta B0DCX7628T is the most aggressive traffic buyer with 57.9% ad keyword coverage and heavy video advertising, likely raising CPCs on batana and hair-growth terms.",
+      "Batana Oil B0CMXF1NK3 has very strong organic coverage at 91.3%, making it difficult to displace without sustained sales velocity.",
+      "Natural Riches B0DJ1THRXM relies almost entirely on organic traffic, creating an opportunity for paid conquesting if the product positioning overlaps.",
+      "Avoid unverified hair-growth, dandruff-treatment, or medical cure claims in listing copy and ads to reduce compliance risk."
+    ]
+  }
+}

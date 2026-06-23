@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CrossMart - Operations Monitor</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Times New Roman",Times,"PingFang SC","Microsoft YaHei",serif;background:#eaeded;color:#0f1111;font-size:14px;min-height:100vh}
+
+/* Topbar */
+.topbar{background:linear-gradient(135deg,#131921 0%,#232f3e 100%);color:white;padding:10px 20px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.topbar .logo{font-weight:700;font-size:15px;letter-spacing:.5px}
+.topbar a{color:#ccc;text-decoration:none;padding:5px 12px;border-radius:6px;font-size:13px;transition:all .2s}
+.topbar a:hover{background:rgba(255,255,255,.1);color:#fff}
+.topbar a.active{background:#e94560;color:white}
+
+/* Filters */
+.filters{background:white;padding:10px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-bottom:1px solid #d5d9d9;position:sticky;top:48px;z-index:99}
+.filters select,.filters input{padding:6px 10px;border:1px solid #d5d9d9;border-radius:6px;font-size:13px;background:white}
+.filters button{padding:6px 14px;border:none;border-radius:6px;font-size:13px;cursor:pointer;background:#e94560;color:white;font-weight:600;transition:all .2s}
+.filters button:hover{background:#d63451}
+.filters .badge{background:#e94560;color:white;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.filters .stat{color:#555;font-size:12px}
+.filters .hint{font-size:11px;color:#999;margin-left:8px}
+
+/* Section + Card */
+.section{margin:16px 16px 0}
+.section-title{font-size:15px;font-weight:700;color:#232f3e;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.section-title .sub{font-size:11px;font-weight:400;color:#999}
+.card{background:white;border:1px solid #d5d9d9;border-radius:10px;overflow:hidden;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.card-header{background:#fafafa;padding:10px 16px;font-weight:600;border-bottom:1px solid #e6e8ea;font-size:13px}
+.card-body{padding:14px 16px}
+
+/* KPI tiles */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.kpi{background:#f7fafc;border:1px solid #e6e8ea;border-radius:8px;padding:12px;text-align:center}
+.kpi .val{font-size:20px;font-weight:700;color:#232f3e}
+.kpi .lbl{font-size:11px;color:#777;margin-top:3px;text-transform:uppercase;letter-spacing:.4px}
+
+/* Traffic radar table */
+.radar-row{padding:10px 16px;border-bottom:1px solid #f0f2f2}
+.radar-row:last-child{border-bottom:none}
+.radar-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.radar-head .asin{font-weight:600;font-size:12px;color:#007185}
+.radar-head .title{font-size:11px;color:#777;max-width:55%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.radar-head .total{font-weight:700;color:#232f3e}
+
+/* Stacked bar (traffic structure) */
+.bar{display:flex;height:22px;border-radius:5px;overflow:hidden;border:1px solid #e6e8ea;margin-top:4px}
+.bar .seg{display:flex;align-items:center;justify-content:center;font-size:10px;color:white;font-weight:600;min-width:0;white-space:nowrap;overflow:hidden}
+.seg.natural{background:#067d62}
+.seg.recommend{background:#f59e0b}
+.seg.ad{background:#e94560}
+.legend{display:flex;gap:14px;margin-top:6px;font-size:11px;color:#555;flex-wrap:wrap}
+.legend span{display:flex;align-items:center;gap:4px}
+.legend .dot{width:10px;height:10px;border-radius:2px;display:inline-block}
+.dot.natural{background:#067d62}.dot.recommend{background:#f59e0b}.dot.ad{background:#e94560}
+
+/* Ad competition table */
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th{background:#fafafa;text-align:left;padding:8px 10px;border-bottom:2px solid #e6e8ea;color:#555;font-weight:600}
+.tbl td{padding:8px 10px;border-bottom:1px solid #f0f2f2}
+.tbl tr:last-child td{border-bottom:none}
+.tbl .asin{color:#007185;font-weight:600}
+.own-row{background:#eff6ff}
+.pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:600}
+.pill.sp{background:#fef2f2;color:#b91c1c}
+.pill.video{background:#eff6ff;color:#1d4ed8}
+.pill.brand{background:#f5f3ff;color:#6d28d9}
+
+/* AI diagnosis */
+.ai-summary{font-size:14px;line-height:1.6;color:#0f1111;background:#f7fafc;padding:12px 14px;border-radius:8px;border:1px solid #e6e8ea;margin-bottom:12px}
+.ai-block{margin-bottom:12px}
+.ai-block h4{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:#067d62;margin-bottom:6px}
+.ai-block.alerts h4{color:#b91c1c}
+.ai-item{font-size:13px;line-height:1.5;padding:7px 12px;border-left:3px solid #067d62;background:#f7fdfb;margin-bottom:5px;border-radius:0 6px 6px 0}
+.ai-block.alerts .ai-item{border-left-color:#e94560;background:#fef2f2}
+
+.loading{text-align:center;padding:40px;color:#999}
+.empty{text-align:center;padding:40px;color:#94a3b8}
+
+@media(max-width:768px){
+  .filters{top:44px;padding:8px 10px}
+  .radar-head .title{display:none}
+  .tbl{font-size:11px}
+  .tbl th,.tbl td{padding:6px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="logo">📈 CrossMart Ops</span>
+  <a href="https://charlescome1995-prog.github.io/crossmart-selector/frontend/selection.html" target="_top">🎯 CrossMart Selector</a>
+  <a href="https://charlescome1995-prog.github.io/crossmart-listing/listing.html" target="_top">📝 CrossMart Listing</a>
+  <a href="https://charlescome1995-prog.github.io/crossmart-monitor/monitor.html" target="_top">📊 CrossMart Monitor</a>
+  <a href="ops.html" class="active">📈 CrossMart Ops</a>
+</div>
+
+<div class="filters">
+  <select id="kwSelect" onchange="renderAll()"></select>
+  <button onclick="showRunHint()">Refresh Data</button>
+  <span class="badge" id="kwBadge">—</span>
+  <span class="stat" id="genTime"></span>
+  <span class="hint">Competitor traffic &amp; ad intelligence · Seller Sprite + Jike · Volcano LLM diagnosis</span>
+</div>
+
+<div id="content">
+  <div class="loading">Loading operations data...</div>
+</div>
+
+<script>
+var DATA = null;
+
+function showRunHint(){
+  var kw = DATA && DATA.keyword ? DATA.keyword : '<keyword>';
+  alert('Run locally:\n\npython backend/run_ops.py "' + kw + '"\n\nThen git push and Ctrl+F5 refresh.');
+}
+function num(v){ if(v===null||v===undefined||v==='') return '—'; return v; }
+function pct(v){ if(v===null||v===undefined||v==='') return '—'; return v + '%'; }
+
+function loadData(){
+  fetch('data/ops-data.json?_=' + Date.now())
+    .then(function(r){ if(!r.ok) throw new Error('no data'); return r.json(); })
+    .then(function(d){ DATA = d; initUI(); })
+    .catch(function(){
+      document.getElementById('content').innerHTML =
+        '<div class="empty">No operations data yet.<br>Run <code>python backend/run_ops.py "keyword"</code> then push.</div>';
+    });
+}
+
+function initUI(){
+  var sel = document.getElementById('kwSelect');
+  sel.innerHTML = '<option value="' + (DATA.keyword||'') + '">' + (DATA.keyword||'(keyword)') + '</option>';
+  document.getElementById('kwBadge').textContent = DATA.keyword || '—';
+  if(DATA.generated_at){
+    document.getElementById('genTime').textContent = 'Updated: ' + new Date(DATA.generated_at).toLocaleString();
+  }
+  renderAll();
+}
+
+function esc(s){ return (s==null?'':String(s)).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); }
+
+function renderRadar(){
+  var rows = (DATA.traffic_radar||[]);
+  if(!rows.length) return '<div class="empty">No competitor traffic data.</div>';
+  var h = '';
+  rows.forEach(function(c){
+    h += '<div class="radar-row">'
+       + '<div class="radar-head"><span class="asin">' + esc(c.asin) + '</span>'
+       + '<span class="title">' + esc(c.product_title||'') + '</span>'
+       + '<span class="total">' + num(c.total_kw) + ' kw</span></div>'
+       + structureBar(c) + '</div>';
+  });
+  return h;
+}
+
+function structureBar(c){
+  var np = c.natural_pct||0, rp = c.recommend_pct||0, ap = c.ad_pct||0;
+  var bar = '<div class="bar">'
+    + (np>0?'<div class="seg natural" style="width:'+np+'%">'+(np>=8?np+'%':'')+'</div>':'')
+    + (rp>0?'<div class="seg recommend" style="width:'+rp+'%">'+(rp>=8?rp+'%':'')+'</div>':'')
+    + (ap>0?'<div class="seg ad" style="width:'+ap+'%">'+(ap>=8?ap+'%':'')+'</div>':'')
+    + '</div>';
+  var legend = '<div class="legend">'
+    + '<span><i class="dot natural"></i>Natural ' + pct(np) + ' (' + num(c.natural_kw) + ')</span>'
+    + '<span><i class="dot recommend"></i>Recommend ' + pct(rp) + ' (' + num(c.recommend_kw) + ')</span>'
+    + '<span><i class="dot ad"></i>Ads ' + pct(ap) + ' (' + num(c.ad_kw) + ')</span>'
+    + '</div>';
+  return bar + legend;
+}
+
+function renderAdComp(){
+  var ac = DATA.ad_competition||{};
+  var comps = ac.competitors||[], own = ac.own||[];
+  var h = '<table class="tbl"><thead><tr><th>ASIN</th><th>SP Ads</th><th>Video Ads</th><th>Brand Ads</th><th>Ad %</th></tr></thead><tbody>';
+  comps.forEach(function(c){
+    h += '<tr><td class="asin">' + esc(c.asin) + '</td>'
+       + '<td><span class="pill sp">' + num(c.sp_ad_kw) + '</span></td>'
+       + '<td><span class="pill video">' + num(c.video_ad_kw) + '</span></td>'
+       + '<td><span class="pill brand">' + num(c.brand_ad_kw) + '</span></td>'
+       + '<td>' + pct(c.ad_pct) + '</td></tr>';
+  });
+  h += '</tbody></table>';
+  // 自家真实数据对比
+  if(own.length){
+    h += '<div style="margin-top:14px;font-size:12px;font-weight:600;color:#1d4ed8">Our Products — real metrics (Jike)</div>';
+    h += '<table class="tbl" style="margin-top:6px"><thead><tr><th>ASIN</th><th>Orders</th><th>Sales</th><th>Sessions</th><th>CVR</th><th>ACOS</th><th>Ad Spend</th></tr></thead><tbody>';
+    own.forEach(function(o){
+      h += '<tr class="own-row"><td class="asin">' + esc(o.asin) + '</td>'
+         + '<td>' + num(o.orders) + '</td><td>' + num(o.sales) + '</td>'
+         + '<td>' + num(o.sessions) + '</td><td>' + (o.cvr!=null?o.cvr+'%':'—') + '</td>'
+         + '<td>' + (o.acos!=null?o.acos+'%':'—') + '</td><td>' + num(o.ad_spend) + '</td></tr>';
+    });
+    h += '</tbody></table>';
+  }
+  return h;
+}
+
+function renderStructure(){
+  var s = DATA.traffic_structure||[];
+  if(!s.length) return '<div class="empty">No structure data.</div>';
+  // 汇总 KPI
+  var totK=0,natK=0,adK=0,recK=0;
+  s.forEach(function(x){ totK+=x.total_kw||0; natK+=x.natural_kw||0; adK+=x.ad_kw||0; recK+=x.recommend_kw||0; });
+  var h = '<div class="kpi-grid">'
+    + '<div class="kpi"><div class="val">' + totK + '</div><div class="lbl">Total Keywords</div></div>'
+    + '<div class="kpi"><div class="val">' + (totK?Math.round(natK/totK*100):0) + '%</div><div class="lbl">Natural Share</div></div>'
+    + '<div class="kpi"><div class="val">' + (totK?Math.round(adK/totK*100):0) + '%</div><div class="lbl">Ad Share</div></div>'
+    + '<div class="kpi"><div class="val">' + (totK?Math.round(recK/totK*100):0) + '%</div><div class="lbl">Recommend Share</div></div>'
+    + '</div>';
+  return h;
+}
+
+function renderAI(){
+  var ai = DATA.ai_diagnosis||{};
+  var h = '';
+  if(ai.summary) h += '<div class="ai-summary">' + esc(ai.summary) + '</div>';
+  function block(title, items, cls){
+    if(!items||!items.length) return '';
+    var b = '<div class="ai-block ' + (cls||'') + '"><h4>' + title + '</h4>';
+    items.forEach(function(it){ b += '<div class="ai-item">' + esc(it) + '</div>'; });
+    return b + '</div>';
+  }
+  h += block('Keyword Opportunities', ai.keyword_opportunities);
+  h += block('Ad Strategy', ai.ad_strategy);
+  h += block('Organic Growth', ai.organic_growth);
+  h += block('Alerts', ai.alerts, 'alerts');
+  if(!h) h = '<div class="empty">No AI diagnosis available.</div>';
+  return h;
+}
+
+function renderAll(){
+  var html = ''
+    + '<div class="section"><div class="section-title">🛰️ Traffic Radar <span class="sub">competitor keyword sources &amp; structure</span></div>'
+    + '<div class="card"><div class="card-body" style="padding:0">' + renderRadar() + '</div></div></div>'
+
+    + '<div class="section"><div class="section-title">🧬 Traffic Structure <span class="sub">natural vs recommend vs ads (aggregate)</span></div>'
+    + '<div class="card"><div class="card-body">' + renderStructure() + '</div></div></div>'
+
+    + '<div class="section"><div class="section-title">📢 Ad Competition <span class="sub">competitor ad mix vs our real ACOS</span></div>'
+    + '<div class="card"><div class="card-body">' + renderAdComp() + '</div></div></div>'
+
+    + '<div class="section"><div class="section-title">🤖 AI Operations Diagnosis <span class="sub">Volcano LLM strategy</span></div>'
+    + '<div class="card"><div class="card-body">' + renderAI() + '</div></div></div>';
+  document.getElementById('content').innerHTML = html;
+}
+
+loadData();
+</script>
+</body>
+</html>

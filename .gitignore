@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+backend/data/output/*.json
+*.log
+.DS_Store
+
+# Credentials — never commit
+backend/data/jike_config.json
+backend/data/jike_token_cache.json
