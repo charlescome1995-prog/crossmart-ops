@@ -248,6 +248,24 @@ function renderAI(){
   return h;
 }
 
+function renderReview(){
+  var ri = DATA.review_insight||{};
+  var h = '';
+  if(ri.summary) h += '<div class="ai-summary">' + esc(ri.summary) + '</div>';
+  function block(title, items, cls){
+    if(!items||!items.length) return '';
+    var b = '<div class="ai-block ' + (cls||'') + '"><h4>' + title + '</h4>';
+    items.forEach(function(it){ b += '<div class="ai-item">' + esc(it) + '</div>'; });
+    return b + '</div>';
+  }
+  h += block('\ud83d\udc4d Praise Points (what buyers love)', ri.praise_points);
+  h += block('\ud83d\udc4e Pain Points (complaints = our openings)', ri.pain_points, 'alerts');
+  h += block('\ud83d\udca1 Differentiation Opportunities', ri.opportunities);
+  h += block('\u26a0\ufe0f Review Trend Alerts', ri.alerts, 'alerts');
+  if(!h) h = '<div class="empty">No review insight yet. Generate competitor review reports via the Seller Sprite plugin first.</div>';
+  return h;
+}
+
 function renderAll(){
   var html = ''
     + '<div class="section"><div class="section-title">🛰️ Traffic Radar <span class="sub">competitor keyword sources &amp; structure</span></div>'
@@ -260,7 +278,10 @@ function renderAll(){
     + '<div class="card"><div class="card-body">' + renderAdComp() + '</div></div></div>'
 
     + '<div class="section"><div class="section-title">🤖 AI Operations Diagnosis <span class="sub">Volcano LLM strategy</span></div>'
-    + '<div class="card"><div class="card-body">' + renderAI() + '</div></div></div>';
+    + '<div class="card"><div class="card-body">' + renderAI() + '</div></div></div>'
+
+    + '<div class="section"><div class="section-title">💬 Competitor Review Insight <span class="sub">VOC from Seller Sprite review reports</span></div>'
+    + '<div class="card"><div class="card-body">' + renderReview() + '</div></div></div>';
   document.getElementById('content').innerHTML = html;
 }
 

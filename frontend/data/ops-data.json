@@ -1,7 +1,7 @@
 {
   "engine": "B",
   "keyword": "miconazole",
-  "generated_at": "2026-06-23T18:40:13.427452",
+  "generated_at": "2026-06-23T19:34:24.821007",
   "traffic_radar": [
     {
       "asin": "B0CTX77NHH",
@@ -242,19 +242,19 @@
     "own": []
   },
   "ai_diagnosis": {
-    "summary": "Competitor landscape is split between organic-heavy incumbents (Globe ASINs with 80%+ natural coverage and low ad reliance) and aggressive ad scalers (SimplyVital and CHARMPOO with ~46-49% ad keyword coverage). No own product metrics were provided, so CPC bid-level decisions cannot be made reliably; current priority should be building coverage around high-intent antifungal condition and ingredient terms while using ads to accelerate organic rank.",
+    "summary": "The market is keyword-dense and split between strong organic incumbents and aggressive ad attackers. SimplyVital and CHARMPOO are leaning heavily on ads, while Globe variants rely mainly on organic/recommendation traffic, so a new or weaker listing needs disciplined CPC harvesting plus organic rank building rather than broad spend.",
     "keyword_opportunities": [
-      "clotrimazole antifungal cream 1%",
-      "miconazole antifungal cream 2%",
-      "jock itch cream / jock itch treatment",
-      "athlete's foot cream / foot fungus treatment",
-      "ringworm treatment cream / antifungal skin cream"
+      "antifungal cream",
+      "miconazole cream / miconazole nitrate",
+      "clotrimazole cream 1%",
+      "jock itch cream / athlete's foot treatment",
+      "ringworm treatment cream"
     ],
     "ad_strategy": [
-      "Build separate Sponsored Products manual campaigns by intent cluster: ingredient terms, condition terms, symptom terms, and competitor ASIN/product targeting.",
-      "Use exact match for high-intent core terms and phrase/broad match only for harvesting; move converting search terms into exact campaigns after validation.",
-      "Launch product targeting against organic-heavy Globe ASINs and ad-heavy SimplyVital/CHARMPOO ASINs to capture competitor comparison traffic.",
-      "Test Sponsored Brands Video for education-heavy terms such as jock itch, athlete's foot, ringworm, itching, burning, and fast-absorbing antifungal cream, since CHARMPOO is already using video traffic."
+      "Build separate manual campaigns by intent: condition terms, ingredient terms, symptom terms, and competitor ASIN targeting to isolate CTR, CPC, CVR, and ACOS.",
+      "Use Sponsored Products first for conversion capture, then add Sponsored Brands Video only on proven high-CVR terms to avoid high CPC waste.",
+      "Run auto campaigns only as search-term mining; move converting queries into exact/phrase manual campaigns and negate waste weekly.",
+      "Defend against SimplyVital and CHARMPOO by targeting their ASINs and overlapping high-intent terms, but cap bids where CPC rises faster than CVR."
     ],
     "bid_actions": {
       "add_keywords": [],
@@ -263,16 +263,47 @@
       "lower_bid": []
     },
     "organic_growth": [
-      "Align title, bullets, backend search terms, and A+ content around the main condition and ingredient clusters: clotrimazole, miconazole, jock itch, athlete's foot, ringworm, itching, burning, cracking, and scaling.",
-      "Use SP exact campaigns to drive conversions on 5-10 priority keywords, then maintain spend until organic rank improves and TACOS stabilizes.",
-      "Improve conversion rate before scaling bids: strengthen main image, dosage/ingredient clarity, use-case badges, comparison chart, and review generation.",
-      "Monitor keyword rank weekly and shift budget from broad discovery into exact campaigns where ad conversions begin lifting organic placement."
+      "Rewrite title, bullets, and backend terms around ingredient plus use-case combinations such as miconazole, clotrimazole, jock itch, athlete's foot, and ringworm.",
+      "Use exact-match PPC to drive sales velocity on 5-10 core high-intent keywords, then monitor organic rank movement weekly.",
+      "Improve CTR with main image clarity, pack size visibility, medical-use relevance, and competitive pricing/couponing.",
+      "Improve CVR through trust signals: active ingredient, strength percentage, treatment areas, fast absorption, and clear compliance-friendly claims."
     ],
     "alerts": [
-      "SimplyVital is the most aggressive advertiser with 378 ad keywords and 55 campaigns, creating high CPC pressure across core antifungal terms.",
-      "CHARMPOO has a diversified ad mix including SP, video, and brand ads, indicating a stronger upper-funnel and branded defense strategy.",
-      "Globe ASINs rely heavily on organic and recommendation traffic, making them difficult to displace without sustained conversion-driven ranking campaigns.",
-      "Own product metrics are missing, so spend, CTR, CPC, CVR, and ACOS optimization cannot be diagnosed; ad search term and campaign data should be added before bid changes."
+      "SimplyVital is the most aggressive ad competitor with 378 ad keywords and 55 campaigns, likely pushing CPC up on core category terms.",
+      "CHARMPOO uses a broader ad mix including Sponsored Brands Video and brand ads, creating pressure beyond standard Sponsored Products placements.",
+      "Globe listings have very strong organic coverage with low ad reliance, making them difficult to displace without sustained sales velocity.",
+      "Own-product performance data is missing, so keyword-level bid increases, decreases, and negations should not be made until CTR, CPC, spend, CVR, and ACOS are available."
+    ]
+  },
+  "review_insight": {
+    "summary": "The backpack competitor is strongly liked for lightweight travel use, durability, water resistance, pockets, and value, while the deodorant is praised for scent, long wear, and perceived underarm brightening. The biggest opportunity is to beat competitors on reliability and sensitivity: stronger backpack zippers/organization and a deodorant positioning that manages fragrance strength and irritation risk.",
+    "praise_points": [
+      "Backpack: very lightweight and packable, folds into its own pouch for travel.",
+      "Backpack: durable/sturdy enough for long trips, day hikes, and repeated use.",
+      "Backpack: useful compartments, lots of pockets, and enough room for travel essentials.",
+      "Backpack: water-resistant/waterproof features are a clear purchase driver.",
+      "Deodorant: strong, perfume-like scent that many buyers love and say lasts all day.",
+      "Deodorant: some buyers report underarms looking lighter or dark shadows clearing."
+    ],
+    "pain_points": [
+      "Backpack: zipper failure appears as a serious dissatisfaction trigger, even with light use.",
+      "Backpack: lack of zippered interior pockets limits organization/security for some users.",
+      "Backpack: potential fulfillment/QC issue with customer receiving an apparently used item.",
+      "Deodorant: fragrance can be too strong/potent, with one review mentioning asthma flare.",
+      "Deodorant: irritation risk, including rash, itching, and worsening dark underarms.",
+      "Deodorant: texture may feel thick to some buyers."
+    ],
+    "opportunities": [
+      "For backpacks, emphasize upgraded zippers, reinforced stress points, and durability testing in listing images and bullets.",
+      "Add or highlight secure zippered interior pockets, laptop/tablet compatibility, water bottle storage, and travel organization.",
+      "Use clear new-product packaging/QC messaging to reduce concerns about used or returned inventory.",
+      "For deodorant, offer or position a sensitive-skin/fragrance-balanced version, with clear patch-test guidance and realistic brightening claims."
+    ],
+    "alerts": [
+      "Backpack zipper breakage is a high-impact risk because it makes the bag unusable.",
+      "Deodorant scent intensity may create returns or negative reviews from sensitive, allergic, or asthma-prone buyers.",
+      "Skin irritation and rash complaints could undermine brightening/underarm-care claims.",
+      "Monitor fulfillment reviews for signs of used or contaminated products being shipped."
     ]
   }
 }

@@ -116,6 +116,57 @@ If the data is insufficient for a bucket, return an empty list for it (do not in
                 'organic_growth': [], 'alerts': []}
 
 
+def ai_review_insight(review_reports):
+    """喂卖家精灵评论分析数据给 LLM，输出竞品评论洞察（源自 127条GPT指令「竞品评论分析」）。
+    review_reports: review_analysis.collect_review_analysis() 的输出。
+    数据来自卖家精灵插件预生成的评论报告，不直接抓亚马逊。
+    """
+    if not review_reports:
+        return {'summary': '(no review reports available - generate them via Seller Sprite plugin first)',
+                'praise_points': [], 'pain_points': [], 'opportunities': [], 'alerts': []}
+    # 精简 payload（只留词云/特点评分/部分评论原文）
+    compact = []
+    for r in review_reports:
+        compact.append({
+            'asin': r.get('asin', ''),
+            'feature_scores': r.get('feature_scores', []),
+            'review_tags': r.get('review_tags', [])[:20],
+            'sample_reviews': [rv.get('text', '')[:200] for rv in r.get('reviews', [])[:12]],
+        })
+    system = (
+        "You are an Amazon competitive review (VOC) analyst. Analyze competitor review tags, "
+        "feature scores and sample reviews to find what buyers love and complain about. "
+        "Output STRICT JSON only, no markdown fences."
+    )
+    prompt = f"""Analyze the following competitor review-analysis data (from Seller Sprite review reports).
+
+DATA (JSON):
+{json.dumps(compact, ensure_ascii=False, indent=2)}
+
+Return STRICT JSON (all text in English, concise & actionable):
+{{
+  "summary": "2-3 sentence read of competitor VOC: overall sentiment and the biggest opportunity",
+  "praise_points": ["top 4-6 things buyers LOVE (selling points to match or beat)"],
+  "pain_points": ["top 4-6 recurring COMPLAINTS / negative themes (your differentiation openings)"],
+  "opportunities": ["3-4 concrete product/listing moves to exploit the pain points"],
+  "alerts": ["any review trend risk worth watching, e.g. rising complaints about a feature"]
+}}
+Base everything on the data; do NOT invent quotes or numbers."""
+    try:
+        raw = (llm_client.chat_openai(prompt, system=system, model=CHAT_MODEL,
+                                      max_tokens=2000, temperature=0.4) or '').strip()
+        if raw.startswith('```'):
+            raw = raw.split('```', 2)[1] if '```' in raw else raw
+            raw = raw.lstrip('json').strip().rstrip('`').strip()
+        s, e = raw.find('{'), raw.rfind('}')
+        if s >= 0 and e > s:
+            raw = raw[s:e+1]
+        return json.loads(raw)
+    except Exception as ex:
+        return {'summary': f'(review insight unavailable: {str(ex)[:120]})',
+                'praise_points': [], 'pain_points': [], 'opportunities': [], 'alerts': []}
+
+
 def run_step2(keyword_label, raw_path=None, jike_data=None, with_ai=True):
     raw_path = raw_path or os.path.join(OUTPUT_DIR, 'ops-raw.json')
     if not os.path.exists(raw_path):
@@ -169,9 +220,22 @@ def run_step2(keyword_label, raw_path=None, jike_data=None, with_ai=True):
         })
 
     ai = {}
+    review_insight = {}
     if with_ai:
         print("  [AI] 运营诊断中...")
         ai = ai_diagnose({'competitors': competitors, 'own_products': own})
+        # 评论分析洞察（读卖家精灵插件预生成的报告，零额外抓取）
+        rev_path = os.path.join(OUTPUT_DIR, 'review-analysis-raw.json')
+        if os.path.exists(rev_path):
+            try:
+                with open(rev_path, 'r', encoding='utf-8') as f:
+                    rev_raw = json.load(f)
+                reports = rev_raw.get('reports', [])
+                if reports:
+                    print(f"  [AI] 竞品评论分析中...（{len(reports)} 份报告）")
+                    review_insight = ai_review_insight(reports)
+            except Exception as e:
+                print(f"  [warn] 评论分析跳过: {str(e)[:80]}")
 
     result = {
         'engine': 'B',
@@ -192,6 +256,7 @@ def run_step2(keyword_label, raw_path=None, jike_data=None, with_ai=True):
             'own': own,
         },
         'ai_diagnosis': ai,
+        'review_insight': review_insight,
     }
     out = os.path.join(FRONTEND_DATA, 'ops-data-B.json')
     with open(out, 'w', encoding='utf-8') as f:
