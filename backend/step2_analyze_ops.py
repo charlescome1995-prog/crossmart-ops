@@ -64,8 +64,10 @@ def build_traffic_structure(reversing):
 def ai_diagnose(payload):
     """喂运营数据给 LLM，输出运营诊断。"""
     system = (
-        "You are a senior Amazon operations strategist for cross-border e-commerce. "
+        "You are a senior Amazon operations strategist AND a seasoned Amazon CPC advertising expert "
+        "for cross-border e-commerce, proficient in Amazon advertising and ranking algorithms. "
         "Analyze competitor traffic structure, advertising mix and the seller's own real metrics. "
+        "For ad decisions, reason across CTR, CPC, SPEND, CVR and ACOS dimensions. "
         "Output STRICT JSON only, no markdown fences."
     )
     prompt = f"""Based on the operations data below, produce an operations diagnosis.
@@ -78,9 +80,22 @@ Return STRICT JSON with this schema (all text in English, concise & actionable):
   "summary": "2-3 sentence overall operations health read",
   "keyword_opportunities": ["3-5 high-value keywords/angles we likely under-cover"],
   "ad_strategy": ["3-4 concrete advertising optimization moves"],
-  "organic_growth": ["3-4 steps to lift organic ranking"],
+  "bid_actions": {{
+    "add_keywords": ["search terms to ADD to manual targeting (high CVR / on-topic)"],
+    "negate_keywords": ["search terms to NEGATE (high SPEND, high ACOS, low CVR)"],
+    "raise_bid": ["keywords whose bid should be INCREASED (good CVR, losing impressions)"],
+    "lower_bid": ["keywords whose bid should be DECREASED (high ACOS / high CPC, weak CVR)"]
+  }},
+  "organic_growth": ["3-4 steps to lift organic ranking (the ad->organic ranking path)"],
   "alerts": ["competitor/operational risks worth watching, e.g. a competitor leaning hard on ads"]
-}}"""
+}}
+
+Guidance for bid_actions (Amazon CPC best practice):
+- ADD: search terms that are relevant and convert well but are not yet in manual targeting.
+- NEGATE: terms burning spend with high ACOS and low/zero conversions.
+- RAISE bid: converting keywords that are under-exposed (low impression share).
+- LOWER bid: keywords with high ACOS or high CPC and weak conversion.
+If the data is insufficient for a bucket, return an empty list for it (do not invent ASIN-specific numbers)."""
     try:
         raw = llm_client.chat_openai(prompt, system=system, model=CHAT_MODEL,
                                      max_tokens=2000, temperature=0.4)
@@ -96,6 +111,8 @@ Return STRICT JSON with this schema (all text in English, concise & actionable):
     except Exception as ex:
         return {'summary': f'(AI diagnosis unavailable: {str(ex)[:120]})',
                 'keyword_opportunities': [], 'ad_strategy': [],
+                'bid_actions': {'add_keywords': [], 'negate_keywords': [],
+                                'raise_bid': [], 'lower_bid': []},
                 'organic_growth': [], 'alerts': []}
 
 

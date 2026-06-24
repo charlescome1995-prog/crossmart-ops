@@ -1,7 +1,7 @@
 {
   "engine": "B",
-  "keyword": "antifungal cream",
-  "generated_at": "2026-06-23T06:05:59.877367",
+  "keyword": "miconazole",
+  "generated_at": "2026-06-23T18:40:13.427452",
   "traffic_radar": [
     {
       "asin": "B0CTX77NHH",
@@ -239,48 +239,40 @@
         "ad_campaigns": 3
       }
     ],
-    "own": [
-      {
-        "asin": "B0FVSS8SR1",
-        "product_name": "60g瓶装止痒膏",
-        "orders": 9,
-        "units": 9,
-        "sales": 179.91,
-        "sessions": 47,
-        "cvr": 19.15,
-        "acos": 0.0,
-        "ad_spend": 0.0,
-        "rank": null
-      }
-    ]
+    "own": []
   },
   "ai_diagnosis": {
-    "summary": "Your product has a strong early CVR of 19.15%, but only 47 sessions and 0 ad spend, so the main issue is traffic acquisition, not conversion. Competitors are winning either through deep organic/recommendation traffic or heavy PPC coverage, while your ASIN currently has no visible ranking moat.",
+    "summary": "Competitor landscape is split between organic-heavy incumbents (Globe ASINs with 80%+ natural coverage and low ad reliance) and aggressive ad scalers (SimplyVital and CHARMPOO with ~46-49% ad keyword coverage). No own product metrics were provided, so CPC bid-level decisions cannot be made reliably; current priority should be building coverage around high-intent antifungal condition and ingredient terms while using ads to accelerate organic rank.",
     "keyword_opportunities": [
+      "clotrimazole antifungal cream 1%",
+      "miconazole antifungal cream 2%",
       "jock itch cream / jock itch treatment",
-      "athlete's foot cream / athlete's foot treatment",
-      "ringworm cream / ringworm treatment",
-      "miconazole nitrate 2% antifungal cream or clotrimazole 1% cream if formulation supports the claim",
-      "itch relief cream for burning, cracking, scaling skin"
+      "athlete's foot cream / foot fungus treatment",
+      "ringworm treatment cream / antifungal skin cream"
     ],
     "ad_strategy": [
-      "Launch Sponsored Products with separate auto, broad, phrase, and exact campaigns to quickly build keyword data from the current high CVR base.",
-      "Create exact-match campaigns for core terms like jock itch cream, athlete's foot cream, ringworm treatment, antifungal cream, and anti itch cream.",
-      "Run product targeting against B0C7VP8SFV and B0CTX77NHH, which are ad-heavy competitors, and test lower-bid placements on Globe ASINs with strong organic traffic.",
-      "If brand eligible, add Sponsored Brands Video because CHARMPOO is already using video and brand ads to capture premium placements."
+      "Build separate Sponsored Products manual campaigns by intent cluster: ingredient terms, condition terms, symptom terms, and competitor ASIN/product targeting.",
+      "Use exact match for high-intent core terms and phrase/broad match only for harvesting; move converting search terms into exact campaigns after validation.",
+      "Launch product targeting against organic-heavy Globe ASINs and ad-heavy SimplyVital/CHARMPOO ASINs to capture competitor comparison traffic.",
+      "Test Sponsored Brands Video for education-heavy terms such as jock itch, athlete's foot, ringworm, itching, burning, and fast-absorbing antifungal cream, since CHARMPOO is already using video traffic."
     ],
+    "bid_actions": {
+      "add_keywords": [],
+      "negate_keywords": [],
+      "raise_bid": [],
+      "lower_bid": []
+    },
     "organic_growth": [
-      "Rewrite title, bullets, A+ content, and backend search terms around the main symptom and condition keywords, while keeping all medical claims compliant.",
-      "Improve image stack with clear use cases: jock itch, athlete's foot, ringworm, itch relief, fast absorption, size/value, and application method.",
-      "Use coupon or limited launch discount to improve CTR and conversion while PPC builds sales velocity.",
-      "Start review generation through Vine or Request a Review; competitors with stronger organic/recommend traffic will be difficult to beat without review depth."
+      "Align title, bullets, backend search terms, and A+ content around the main condition and ingredient clusters: clotrimazole, miconazole, jock itch, athlete's foot, ringworm, itching, burning, cracking, and scaling.",
+      "Use SP exact campaigns to drive conversions on 5-10 priority keywords, then maintain spend until organic rank improves and TACOS stabilizes.",
+      "Improve conversion rate before scaling bids: strengthen main image, dosage/ingredient clarity, use-case badges, comparison chart, and review generation.",
+      "Monitor keyword rank weekly and shift budget from broad discovery into exact campaigns where ad conversions begin lifting organic placement."
     ],
     "alerts": [
-      "B0C7VP8SFV is aggressively buying traffic with 378 ad keywords and 55 ad campaigns, which may raise CPCs on core category terms.",
-      "B0CTX77NHH has a diversified ad mix with SP, video, and brand ads, so it may dominate top-of-search and video placements.",
-      "Globe ASINs have strong organic and recommendation traffic with very low ad dependency, indicating a mature ranking moat.",
-      "Your ASIN has rank null and only 47 sessions, so the 19.15% CVR is promising but not yet statistically stable.",
-      "Check compliance carefully: antifungal, miconazole, clotrimazole, and treatment claims should only be used if the active ingredient and Amazon/OTC requirements support them."
+      "SimplyVital is the most aggressive advertiser with 378 ad keywords and 55 campaigns, creating high CPC pressure across core antifungal terms.",
+      "CHARMPOO has a diversified ad mix including SP, video, and brand ads, indicating a stronger upper-funnel and branded defense strategy.",
+      "Globe ASINs rely heavily on organic and recommendation traffic, making them difficult to displace without sustained conversion-driven ranking campaigns.",
+      "Own product metrics are missing, so spend, CTR, CPC, CVR, and ACOS optimization cannot be diagnosed; ad search term and campaign data should be added before bid changes."
     ]
   }
 }

@@ -230,6 +230,18 @@ function renderAI(){
   }
   h += block('Keyword Opportunities', ai.keyword_opportunities);
   h += block('Ad Strategy', ai.ad_strategy);
+  // CPC 加减决策（源自 127条GPT指令 加减词/加减Bid）
+  var ba = ai.bid_actions||{};
+  function baBlock(title, items, cls){
+    if(!items||!items.length) return '';
+    var b = '<div class="ai-block ' + (cls||'') + '"><h4>' + title + '</h4>';
+    items.forEach(function(it){ b += '<div class="ai-item">' + esc(it) + '</div>'; });
+    return b + '</div>';
+  }
+  h += baBlock('\u2795 Add Keywords (high CVR)', ba.add_keywords);
+  h += baBlock('\u26d4 Negate Keywords (high ACOS)', ba.negate_keywords, 'alerts');
+  h += baBlock('\u2b06\ufe0f Raise Bid (under-exposed converters)', ba.raise_bid);
+  h += baBlock('\u2b07\ufe0f Lower Bid (high ACOS / CPC)', ba.lower_bid, 'alerts');
   h += block('Organic Growth', ai.organic_growth);
   h += block('Alerts', ai.alerts, 'alerts');
   if(!h) h = '<div class="empty">No AI diagnosis available.</div>';
