@@ -79,15 +79,17 @@ def git_push():
         from datetime import datetime
         msg = f"data: 定时运营监测更新 {datetime.now().strftime('%Y-%m-%d %H:%M')}"
         subprocess.run(["git", "add", "frontend/data"], cwd=PROJECT_ROOT,
-                       capture_output=True, text=True)
+                       capture_output=True, text=True, timeout=60)
         r = subprocess.run(["git", "commit", "-m", msg], cwd=PROJECT_ROOT,
-                           capture_output=True, text=True)
+                           capture_output=True, text=True, timeout=60)
         if "nothing to commit" in (r.stdout + r.stderr):
             print("[scheduled_run] 无数据变化，跳过 push")
             return
         subprocess.run(["git", "push", "origin", "main"], cwd=PROJECT_ROOT,
-                       capture_output=True, text=True)
+                       capture_output=True, text=True, timeout=300)
         print("[scheduled_run] ✅ 已 git push 运营数据")
+    except subprocess.TimeoutExpired:
+        print("[scheduled_run] ⚠️ git push 超时(300s)，跳过推送避免阻塞")
     except Exception as e:
         print(f"[scheduled_run] git push 失败: {str(e)[:150]}")
 
@@ -107,7 +109,7 @@ def main():
     env["CDP_PORT"] = "9225"
     rc = subprocess.run(
         [sys.executable, run_ops, "--all"],
-        cwd=BACKEND_DIR, env=env
+        cwd=BACKEND_DIR, env=env, timeout=3600
     ).returncode
     print(f"[scheduled_run] run_ops.py 退出码={rc}")
 
