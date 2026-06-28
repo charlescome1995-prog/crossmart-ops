@@ -1,30 +1,8 @@
 {
   "engine": "B",
   "keyword": "antifungal cream",
-  "generated_at": "2026-06-27T22:05:36.504688",
+  "generated_at": "2026-06-28T22:05:46.089253",
   "traffic_radar": [
-    {
-      "asin": "B0CTX77NHH",
-      "product_title": "CHARMPOO Antifungal Cream, 2% Miconazole for Jock Itch, Athlete’s Foot & Ringworm, Fast-Absorbing Anti Fungal Skin Cream",
-      "total_kw": 276,
-      "natural_kw": 240,
-      "ad_kw": 159,
-      "recommend_kw": 8,
-      "natural_pct": 87.0,
-      "ad_pct": 57.6,
-      "recommend_pct": 2.9,
-      "sp_ad_kw": 56,
-      "video_ad_kw": 61,
-      "brand_ad_kw": 42,
-      "ads_detail": {
-        "asin": "B0CTX77NHH",
-        "ad_groups": 43,
-        "sp_groups": 42,
-        "sbv_groups": 1,
-        "sb_groups": 0,
-        "ad_campaigns": 40
-      }
-    },
     {
       "asin": "B013PGADAW",
       "product_title": "Globe Clotrimazole Antifungal Cream 1% USP (1 oz), Anti Fungal Treatment, Relieves Itching, Burning, Cracking and Scalin",
@@ -48,38 +26,16 @@
       }
     },
     {
-      "asin": "B0D98XM5C9",
-      "product_title": "Miconazole Antifungal Cream for Skin - 4 oz of Miconazole Nitrate for Jock Itch, Athlete's Foot, Itching, and Ringworm 变",
-      "total_kw": 322,
-      "natural_kw": 310,
-      "ad_kw": 76,
-      "recommend_kw": 8,
-      "natural_pct": 96.3,
-      "ad_pct": 23.6,
-      "recommend_pct": 2.5,
-      "sp_ad_kw": 76,
-      "video_ad_kw": 0,
-      "brand_ad_kw": 0,
-      "ads_detail": {
-        "asin": "B0D98XM5C9",
-        "ad_groups": 3,
-        "sp_groups": 3,
-        "sbv_groups": 0,
-        "sb_groups": 0,
-        "ad_campaigns": 2
-      }
-    },
-    {
       "asin": "B0C7VP8SFV",
       "product_title": "SimplyVital 1% Clotrimazole Antifungal Cream - Treats Most Athlete's Foot, Jock Itch, Ringworm - Athletes Foot Treatment",
-      "total_kw": 689,
-      "natural_kw": 583,
-      "ad_kw": 322,
+      "total_kw": 706,
+      "natural_kw": 593,
+      "ad_kw": 328,
       "recommend_kw": 28,
-      "natural_pct": 84.6,
-      "ad_pct": 46.7,
-      "recommend_pct": 4.1,
-      "sp_ad_kw": 322,
+      "natural_pct": 84.0,
+      "ad_pct": 46.5,
+      "recommend_pct": 4.0,
+      "sp_ad_kw": 328,
       "video_ad_kw": 0,
       "brand_ad_kw": 0,
       "ads_detail": {
@@ -90,44 +46,9 @@
         "sb_groups": 0,
         "ad_campaigns": 55
       }
-    },
-    {
-      "asin": "B015HNGLJS",
-      "product_title": "Globe Clotrimazole Antifungal Cream 1% USP (1 oz), Anti Fungal Treatment, Relieves Itching, Burning, Cracking and Scalin",
-      "total_kw": 590,
-      "natural_kw": 580,
-      "ad_kw": 16,
-      "recommend_kw": 17,
-      "natural_pct": 98.3,
-      "ad_pct": 2.7,
-      "recommend_pct": 2.9,
-      "sp_ad_kw": 16,
-      "video_ad_kw": 0,
-      "brand_ad_kw": 0,
-      "ads_detail": {
-        "asin": "B015HNGLJS",
-        "ad_groups": 3,
-        "sp_groups": 3,
-        "sbv_groups": 0,
-        "sb_groups": 0,
-        "ad_campaigns": 3
-      }
     }
   ],
   "traffic_structure": [
-    {
-      "asin": "B0CTX77NHH",
-      "total_kw": 276,
-      "natural_kw": 240,
-      "recommend_kw": 8,
-      "ad_kw": 159,
-      "natural_pct": 87.0,
-      "recommend_pct": 2.9,
-      "ad_pct": 57.6,
-      "sp_ad_kw": 56,
-      "video_ad_kw": 61,
-      "brand_ad_kw": 42
-    },
     {
       "asin": "B013PGADAW",
       "total_kw": 613,
@@ -142,58 +63,21 @@
       "brand_ad_kw": 0
     },
     {
-      "asin": "B0D98XM5C9",
-      "total_kw": 322,
-      "natural_kw": 310,
-      "recommend_kw": 8,
-      "ad_kw": 76,
-      "natural_pct": 96.3,
-      "recommend_pct": 2.5,
-      "ad_pct": 23.6,
-      "sp_ad_kw": 76,
-      "video_ad_kw": 0,
-      "brand_ad_kw": 0
-    },
-    {
       "asin": "B0C7VP8SFV",
-      "total_kw": 689,
-      "natural_kw": 583,
+      "total_kw": 706,
+      "natural_kw": 593,
       "recommend_kw": 28,
-      "ad_kw": 322,
-      "natural_pct": 84.6,
-      "recommend_pct": 4.1,
-      "ad_pct": 46.7,
-      "sp_ad_kw": 322,
-      "video_ad_kw": 0,
-      "brand_ad_kw": 0
-    },
-    {
-      "asin": "B015HNGLJS",
-      "total_kw": 590,
-      "natural_kw": 580,
-      "recommend_kw": 17,
-      "ad_kw": 16,
-      "natural_pct": 98.3,
-      "recommend_pct": 2.9,
-      "ad_pct": 2.7,
-      "sp_ad_kw": 16,
+      "ad_kw": 328,
+      "natural_pct": 84.0,
+      "recommend_pct": 4.0,
+      "ad_pct": 46.5,
+      "sp_ad_kw": 328,
       "video_ad_kw": 0,
       "brand_ad_kw": 0
     }
   ],
   "ad_competition": {
     "competitors": [
-      {
-        "asin": "B0CTX77NHH",
-        "sp_ad_kw": 56,
-        "video_ad_kw": 61,
-        "brand_ad_kw": 42,
-        "ad_pct": 57.6,
-        "ad_groups": 43,
-        "sp_groups": 42,
-        "sbv_groups": 1,
-        "ad_campaigns": 40
-      },
       {
         "asin": "B013PGADAW",
         "sp_ad_kw": 18,
@@ -206,55 +90,33 @@
         "ad_campaigns": 2
       },
       {
-        "asin": "B0D98XM5C9",
-        "sp_ad_kw": 76,
-        "video_ad_kw": 0,
-        "brand_ad_kw": 0,
-        "ad_pct": 23.6,
-        "ad_groups": 3,
-        "sp_groups": 3,
-        "sbv_groups": 0,
-        "ad_campaigns": 2
-      },
-      {
         "asin": "B0C7VP8SFV",
-        "sp_ad_kw": 322,
+        "sp_ad_kw": 328,
         "video_ad_kw": 0,
         "brand_ad_kw": 0,
-        "ad_pct": 46.7,
+        "ad_pct": 46.5,
         "ad_groups": 55,
         "sp_groups": 54,
         "sbv_groups": 1,
         "ad_campaigns": 55
-      },
-      {
-        "asin": "B015HNGLJS",
-        "sp_ad_kw": 16,
-        "video_ad_kw": 0,
-        "brand_ad_kw": 0,
-        "ad_pct": 2.7,
-        "ad_groups": 3,
-        "sp_groups": 3,
-        "sbv_groups": 0,
-        "ad_campaigns": 3
       }
     ],
     "own": []
   },
   "ai_diagnosis": {
-    "summary": "The market has two distinct competitor profiles: top mature players rely primarily on organic traffic, with low ad spend and high organic keyword coverage, while two newer aggressive competitors (B0CTX77NHH, B0C7VP8SFV) run heavy mixed ad campaigns to capture market share. Most competitors focus exclusively on Sponsored Products, leaving gaps in video and brand ad inventory for new entrants.",
+    "summary": "We observe two leading competitors with vastly different traffic and advertising strategies in the antifungal cream category. The top organic competitor relies almost entirely on natural ranking with minimal advertising investment, while the newer aggressive competitor heavily invests in Sponsored Products to capture keyword share.",
     "keyword_opportunities": [
-      "miconazole antifungal cream large size",
-      "4 oz jock itch treatment",
-      "fast absorbing antifungal cream for ringworm",
-      "clotrimazole 1 oz athlete's foot cream",
-      "prescription strength antifungal skin cream"
+      "athletes foot treatment",
+      "jock itch treatment",
+      "ringworm treatment",
+      "antifungal cream for itching",
+      "clotrimazole 1% cream"
     ],
     "ad_strategy": [
-      "Launch a small Sponsored Brands Video campaign to capture top-of-search video inventory that all competitors except B0CTX77NHH ignore",
-      "Structure ad campaigns into tight, single-theme ad groups similar to aggressive competitors to improve relevance and Quality Score",
-      "Start with low-intensity broad auto targeting to mine converting search terms before expanding into manual targeting",
-      "Prioritize targeting high-intent long-tail symptom and condition keywords that top organic players have not fully covered"
+      "Add low to mid-intensity long-tail product keyword targeting to capture organic ranking tail opportunities",
+      "Launch SBV (Sponsored Brands Video) campaigns to capture top-of-search impression share not currently utilized by competitors",
+      "Structure SP campaigns into tightly themed ad groups by condition (athlete's foot, jock itch, ringworm) to improve relevance and Quality Score",
+      "Scale aggressive SP placement targeting for high-converting keywords to match the aggressive competitor's share of voice"
     ],
     "bid_actions": {
       "add_keywords": [],
@@ -263,45 +125,42 @@
       "lower_bid": []
     },
     "organic_growth": [
-      "Allocate 15-20% of ad spend to top converting core keywords to drive consistent sales velocity that lifts organic ranking",
-      "Use ad traffic to test and capture conversion data for under-ranking keywords to improve organic search relevance",
-      "Push daily sales volume for high-intent keywords to outrank slow-moving mature competitors that rely solely on organic traffic",
-      "Optimize listing content with keywords gained from ad search term reports to align with user search intent and boost organic indexing"
+      "Pull converting search terms from automatic SP campaigns and add them to organic product listing copy to boost on-page relevance",
+      "Allocate a fixed daily ad budget to top converting keywords to drive consistent sales velocity, which lifts organic ranking over time",
+      "Use sponsored ads to index for long-tail keywords that have not yet earned organic rankings, then consolidate ranking with ongoing sales",
+      "Optimize listing title and backend search terms with high-volume, relevant keywords captured from competitor keyword sets to improve organic indexing"
     ],
     "alerts": [
-      "B0CTX77NHH is running an aggressive mixed ad strategy with 57.6% of its total keywords coming from ads, and is capturing search share across multiple ad placements",
-      "B0C7VP8SFV has 322 ad keywords and 55 ad groups, indicating it is actively bidding on a large keyword set to grow market share",
-      "Mature competitors like B013PGADAW and B015HNGLJS have very high organic keyword coverage, making it harder to compete for top generic keyword rankings"
+      "Competitor B0C7VP8SFV is running an aggressive 55-campaign SP strategy to capture 46.5% of its keyword traffic via ads, and will continue to steal share if unaddressed",
+      "The market leader B013PGADAW holds extremely high organic keyword share (81.6% of total keywords) and represents a strong organic ranking barrier to entry"
     ]
   },
   "review_insight": {
-    "summary": "Overall positive sentiment for both competitor products, with the Venture Pal daypack holding strong satisfaction for its travel-focused design and the deodorant earning positive feedback for its scent and performance. The biggest untapped opportunity is improving quality control for the backpack and addressing fragrance sensitivity and skin irritation issues for the deodorant.",
+    "summary": "Two competitor products are analyzed: a hiking/travel backpack has overall positive sentiment due to strong performance on core use cases, and a brightening deodorant also has mostly positive feedback centered on scent, though it has notable irritation issues. The biggest opportunity is improving zipper durability for the backpack category, and offering a milder low-scent option for the deodorant category.",
     "praise_points": [
       "Extremely lightweight and packable for travel and day hikes",
-      "Highly durable, holds up well to years of regular use",
-      "Good water resistance with dedicated waterproof storage pockets",
-      "Plenty of storage space and many organized compartments/pockets",
-      "Pleasant long-lasting fragrance that stays on all day",
-      "Effective at lightening underarm discoloration for many users"
+      "Durable construction with long usable lifespan for most users",
+      "Good water resistance and useful dedicated waterproof pockets",
+      "Ample storage with many compartments and pockets",
+      "Pleasant, long-lasting scent that users enjoy",
+      "Effective at lightening dark underarm discoloration for many buyers"
     ],
     "pain_points": [
-      "Occasional zipper failures even with light use of the backpack",
-      "Received open/used units indicating poor shipping quality control",
-      "Fragrance is overly strong and potent for sensitive users",
-      "Causes painful skin rashes and irritation for some buyers",
-      "Lack of zippered interior pockets in the backpack design",
-      "Fails to lighten dark underarms for some users"
+      "Zipper can break easily even with light use",
+      "Lacks zippered interior storage pockets",
+      "Some units are delivered as open/used returned items",
+      "Scent can be overly strong and potent, triggering respiratory issues",
+      "Can cause bad rashes and irritation for sensitive skin"
     ],
     "opportunities": [
-      "Reinforce zipper construction for the daypack and add quality checks to reduce early failure",
-      "Offer an unscented version of the deodorant to cater to users with fragrance sensitivity and asthma",
-      "Highlight skin-safe, hypoallergenic formulation to differentiate from competitors that cause rashes",
-      "Add a zippered interior pocket to the daypack design to address an unmet user need"
+      "Upgrade zipper quality and hardware to improve durability over this competitor",
+      "Add requested zippered interior pockets to address a common unmet need",
+      "Offer both scented and mild/low-scent versions of deodorant to cover sensitive users",
+      "Strengthen quality control to prevent shipping out previously returned/used units"
     ],
     "alerts": [
-      "Skin irritation and strong fragrance complaints for the deodorant may lead to increasing return rates",
-      "Zipper failure quality issues for the backpack could damage brand reputation over time",
-      "Used/open unit shipping issues suggest inconsistent competitor inventory handling that could be leveraged"
+      "Skin irritation and rash reactions are a common negative issue for deodorant that requires formulation testing to avoid",
+      "Zipper failure is a persistent quality risk that can erode positive long-term durability perceptions for travel backpacks"
     ]
   }
 }
