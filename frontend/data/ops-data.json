@@ -1,25 +1,69 @@
 {
   "engine": "B",
   "keyword": "antifungal cream",
-  "generated_at": "2026-06-28T22:05:46.089253",
+  "generated_at": "2026-06-29T22:06:13.157092",
   "traffic_radar": [
+    {
+      "asin": "B0CTX77NHH",
+      "product_title": "CHARMPOO Antifungal Cream, 2% Miconazole for Jock Itch, Athlete’s Foot & Ringworm, Fast-Absorbing Anti Fungal Skin Cream",
+      "total_kw": 281,
+      "natural_kw": 241,
+      "ad_kw": 166,
+      "recommend_kw": 8,
+      "natural_pct": 85.8,
+      "ad_pct": 59.1,
+      "recommend_pct": 2.8,
+      "sp_ad_kw": 61,
+      "video_ad_kw": 65,
+      "brand_ad_kw": 40,
+      "ads_detail": {
+        "asin": "B0CTX77NHH",
+        "ad_groups": 44,
+        "sp_groups": 43,
+        "sbv_groups": 1,
+        "sb_groups": 0,
+        "ad_campaigns": 41
+      }
+    },
     {
       "asin": "B013PGADAW",
       "product_title": "Globe Clotrimazole Antifungal Cream 1% USP (1 oz), Anti Fungal Treatment, Relieves Itching, Burning, Cracking and Scalin",
-      "total_kw": 613,
-      "natural_kw": 500,
-      "ad_kw": 18,
-      "recommend_kw": 188,
-      "natural_pct": 81.6,
-      "ad_pct": 2.9,
-      "recommend_pct": 30.7,
-      "sp_ad_kw": 18,
+      "total_kw": 622,
+      "natural_kw": 503,
+      "ad_kw": 28,
+      "recommend_kw": 189,
+      "natural_pct": 80.9,
+      "ad_pct": 4.5,
+      "recommend_pct": 30.4,
+      "sp_ad_kw": 28,
       "video_ad_kw": 0,
       "brand_ad_kw": 0,
       "ads_detail": {
         "asin": "B013PGADAW",
         "ad_groups": 2,
         "sp_groups": 2,
+        "sbv_groups": 0,
+        "sb_groups": 0,
+        "ad_campaigns": 2
+      }
+    },
+    {
+      "asin": "B0D98XM5C9",
+      "product_title": "Miconazole Antifungal Cream for Skin - 4 oz of Miconazole Nitrate for Jock Itch, Athlete's Foot, Itching, and Ringworm 变",
+      "total_kw": 322,
+      "natural_kw": 310,
+      "ad_kw": 82,
+      "recommend_kw": 9,
+      "natural_pct": 96.3,
+      "ad_pct": 25.5,
+      "recommend_pct": 2.8,
+      "sp_ad_kw": 82,
+      "video_ad_kw": 0,
+      "brand_ad_kw": 0,
+      "ads_detail": {
+        "asin": "B0D98XM5C9",
+        "ad_groups": 3,
+        "sp_groups": 3,
         "sbv_groups": 0,
         "sb_groups": 0,
         "ad_campaigns": 2
@@ -28,14 +72,14 @@
     {
       "asin": "B0C7VP8SFV",
       "product_title": "SimplyVital 1% Clotrimazole Antifungal Cream - Treats Most Athlete's Foot, Jock Itch, Ringworm - Athletes Foot Treatment",
-      "total_kw": 706,
+      "total_kw": 715,
       "natural_kw": 593,
-      "ad_kw": 328,
-      "recommend_kw": 28,
-      "natural_pct": 84.0,
-      "ad_pct": 46.5,
-      "recommend_pct": 4.0,
-      "sp_ad_kw": 328,
+      "ad_kw": 345,
+      "recommend_kw": 29,
+      "natural_pct": 82.9,
+      "ad_pct": 48.3,
+      "recommend_pct": 4.1,
+      "sp_ad_kw": 345,
       "video_ad_kw": 0,
       "brand_ad_kw": 0,
       "ads_detail": {
@@ -46,32 +90,93 @@
         "sb_groups": 0,
         "ad_campaigns": 55
       }
+    },
+    {
+      "asin": "B015HNGLJS",
+      "product_title": "Globe Clotrimazole Antifungal Cream 1% USP (1 oz), Anti Fungal Treatment, Relieves Itching, Burning, Cracking and Scalin",
+      "total_kw": 601,
+      "natural_kw": 588,
+      "ad_kw": 22,
+      "recommend_kw": 15,
+      "natural_pct": 97.8,
+      "ad_pct": 3.7,
+      "recommend_pct": 2.5,
+      "sp_ad_kw": 22,
+      "video_ad_kw": 0,
+      "brand_ad_kw": 0,
+      "ads_detail": {
+        "asin": "B015HNGLJS",
+        "ad_groups": 3,
+        "sp_groups": 3,
+        "sbv_groups": 0,
+        "sb_groups": 0,
+        "ad_campaigns": 3
+      }
     }
   ],
   "traffic_structure": [
     {
+      "asin": "B0CTX77NHH",
+      "total_kw": 281,
+      "natural_kw": 241,
+      "recommend_kw": 8,
+      "ad_kw": 166,
+      "natural_pct": 85.8,
+      "recommend_pct": 2.8,
+      "ad_pct": 59.1,
+      "sp_ad_kw": 61,
+      "video_ad_kw": 65,
+      "brand_ad_kw": 40
+    },
+    {
       "asin": "B013PGADAW",
-      "total_kw": 613,
-      "natural_kw": 500,
-      "recommend_kw": 188,
-      "ad_kw": 18,
-      "natural_pct": 81.6,
-      "recommend_pct": 30.7,
-      "ad_pct": 2.9,
-      "sp_ad_kw": 18,
+      "total_kw": 622,
+      "natural_kw": 503,
+      "recommend_kw": 189,
+      "ad_kw": 28,
+      "natural_pct": 80.9,
+      "recommend_pct": 30.4,
+      "ad_pct": 4.5,
+      "sp_ad_kw": 28,
+      "video_ad_kw": 0,
+      "brand_ad_kw": 0
+    },
+    {
+      "asin": "B0D98XM5C9",
+      "total_kw": 322,
+      "natural_kw": 310,
+      "recommend_kw": 9,
+      "ad_kw": 82,
+      "natural_pct": 96.3,
+      "recommend_pct": 2.8,
+      "ad_pct": 25.5,
+      "sp_ad_kw": 82,
       "video_ad_kw": 0,
       "brand_ad_kw": 0
     },
     {
       "asin": "B0C7VP8SFV",
-      "total_kw": 706,
+      "total_kw": 715,
       "natural_kw": 593,
-      "recommend_kw": 28,
-      "ad_kw": 328,
-      "natural_pct": 84.0,
-      "recommend_pct": 4.0,
-      "ad_pct": 46.5,
-      "sp_ad_kw": 328,
+      "recommend_kw": 29,
+      "ad_kw": 345,
+      "natural_pct": 82.9,
+      "recommend_pct": 4.1,
+      "ad_pct": 48.3,
+      "sp_ad_kw": 345,
+      "video_ad_kw": 0,
+      "brand_ad_kw": 0
+    },
+    {
+      "asin": "B015HNGLJS",
+      "total_kw": 601,
+      "natural_kw": 588,
+      "recommend_kw": 15,
+      "ad_kw": 22,
+      "natural_pct": 97.8,
+      "recommend_pct": 2.5,
+      "ad_pct": 3.7,
+      "sp_ad_kw": 22,
       "video_ad_kw": 0,
       "brand_ad_kw": 0
     }
@@ -79,44 +184,77 @@
   "ad_competition": {
     "competitors": [
       {
+        "asin": "B0CTX77NHH",
+        "sp_ad_kw": 61,
+        "video_ad_kw": 65,
+        "brand_ad_kw": 40,
+        "ad_pct": 59.1,
+        "ad_groups": 44,
+        "sp_groups": 43,
+        "sbv_groups": 1,
+        "ad_campaigns": 41
+      },
+      {
         "asin": "B013PGADAW",
-        "sp_ad_kw": 18,
+        "sp_ad_kw": 28,
         "video_ad_kw": 0,
         "brand_ad_kw": 0,
-        "ad_pct": 2.9,
+        "ad_pct": 4.5,
         "ad_groups": 2,
         "sp_groups": 2,
         "sbv_groups": 0,
         "ad_campaigns": 2
       },
       {
-        "asin": "B0C7VP8SFV",
-        "sp_ad_kw": 328,
+        "asin": "B0D98XM5C9",
+        "sp_ad_kw": 82,
         "video_ad_kw": 0,
         "brand_ad_kw": 0,
-        "ad_pct": 46.5,
+        "ad_pct": 25.5,
+        "ad_groups": 3,
+        "sp_groups": 3,
+        "sbv_groups": 0,
+        "ad_campaigns": 2
+      },
+      {
+        "asin": "B0C7VP8SFV",
+        "sp_ad_kw": 345,
+        "video_ad_kw": 0,
+        "brand_ad_kw": 0,
+        "ad_pct": 48.3,
         "ad_groups": 55,
         "sp_groups": 54,
         "sbv_groups": 1,
         "ad_campaigns": 55
+      },
+      {
+        "asin": "B015HNGLJS",
+        "sp_ad_kw": 22,
+        "video_ad_kw": 0,
+        "brand_ad_kw": 0,
+        "ad_pct": 3.7,
+        "ad_groups": 3,
+        "sp_groups": 3,
+        "sbv_groups": 0,
+        "ad_campaigns": 3
       }
     ],
     "own": []
   },
   "ai_diagnosis": {
-    "summary": "We observe two leading competitors with vastly different traffic and advertising strategies in the antifungal cream category. The top organic competitor relies almost entirely on natural ranking with minimal advertising investment, while the newer aggressive competitor heavily invests in Sponsored Products to capture keyword share.",
+    "summary": "The antifungal cream category sees two distinct traffic strategies: established mature players rely heavily on organic traffic with minimal ad spend, while new/aggressive competitors prioritize large-scale paid advertising to capture market share. Leading aggressive competitor B0CTX77NHH leverages a diversified ad mix of Sponsored Products and video ads to own more keyword positions, outperforming smaller pure-SP players in keyword coverage.",
     "keyword_opportunities": [
-      "athletes foot treatment",
-      "jock itch treatment",
-      "ringworm treatment",
-      "antifungal cream for itching",
-      "clotrimazole 1% cream"
+      "branded terms for top competitors",
+      "antifungal cream for specific conditions (jock itch, athlete's foot, ringworm)",
+      "large format (4oz) antifungal cream",
+      "fast-absorbing antifungal cream",
+      "recommended topical antifungal treatments"
     ],
     "ad_strategy": [
-      "Add low to mid-intensity long-tail product keyword targeting to capture organic ranking tail opportunities",
-      "Launch SBV (Sponsored Brands Video) campaigns to capture top-of-search impression share not currently utilized by competitors",
-      "Structure SP campaigns into tightly themed ad groups by condition (athlete's foot, jock itch, ringworm) to improve relevance and Quality Score",
-      "Scale aggressive SP placement targeting for high-converting keywords to match the aggressive competitor's share of voice"
+      "Add Sponsored Brand Video campaigns to capture top-of-search impression share, following the successful structure of leading competitor B0CTX77NHH",
+      "Segment ad groups tightly by keyword intent (condition-specific, product form, size) to improve relevance and CTR, matching the granular campaign structure of top aggressive players",
+      "Prioritize keyword expansion into high-volume recommended keywords that low-ad-spend competitors (B013PGADAW) are leaving on the table",
+      "Maintain a balanced organic-paid traffic mix instead of over-reliance on either channel to reduce overall acquisition cost"
     ],
     "bid_actions": {
       "add_keywords": [],
@@ -125,42 +263,43 @@
       "lower_bid": []
     },
     "organic_growth": [
-      "Pull converting search terms from automatic SP campaigns and add them to organic product listing copy to boost on-page relevance",
-      "Allocate a fixed daily ad budget to top converting keywords to drive consistent sales velocity, which lifts organic ranking over time",
-      "Use sponsored ads to index for long-tail keywords that have not yet earned organic rankings, then consolidate ranking with ongoing sales",
-      "Optimize listing title and backend search terms with high-volume, relevant keywords captured from competitor keyword sets to improve organic indexing"
+      "Use targeted ad spend on high-intent core keywords to drive consistent conversions, which boosts organic ranking for those terms over time",
+      "Extract converting search terms from auto ad campaigns and integrate them into the product listing backend and copy to improve organic keyword indexing",
+      "Allocate incremental ad budget to under-performing organic keywords to lift their search ranking into the top 100 positions",
+      "Pivot ad spend to high-converting long-tail keywords to build long-term organic traction for low-competition terms"
     ],
     "alerts": [
-      "Competitor B0C7VP8SFV is running an aggressive 55-campaign SP strategy to capture 46.5% of its keyword traffic via ads, and will continue to steal share if unaddressed",
-      "The market leader B013PGADAW holds extremely high organic keyword share (81.6% of total keywords) and represents a strong organic ranking barrier to entry"
+      "Aggressive competitor B0CTX77NHH is investing heavily in diversified ads to capture 166 paid keyword positions, which will pressure share on core high-intent terms",
+      "Competitor B0C7VP8SFV runs 55+ Sponsored Product campaigns with 345 paid keywords, indicating it is actively expanding keyword coverage in the category",
+      "Mature organic-focused competitors (B015HNGLJS, B0D98XM5C9) hold 90%+ of their traffic from organic, giving them a major cost advantage on converted sales"
     ]
   },
   "review_insight": {
-    "summary": "Two competitor products are analyzed: a hiking/travel backpack has overall positive sentiment due to strong performance on core use cases, and a brightening deodorant also has mostly positive feedback centered on scent, though it has notable irritation issues. The biggest opportunity is improving zipper durability for the backpack category, and offering a milder low-scent option for the deodorant category.",
+    "summary": "Overall positive sentiment for both the travel backpack and brightening deodorant products, with clear gaps in quality control and scent formulation that can be leveraged for differentiation. The backpack earns high marks for core functionality, while the deodorant is popular for its scent and brightening effects, but both have recurring quality and formulation issues.",
     "praise_points": [
-      "Extremely lightweight and packable for travel and day hikes",
-      "Durable construction with long usable lifespan for most users",
-      "Good water resistance and useful dedicated waterproof pockets",
-      "Ample storage with many compartments and pockets",
-      "Pleasant, long-lasting scent that users enjoy",
-      "Effective at lightening dark underarm discoloration for many buyers"
+      "Lightweight, packable design for travel and day hikes",
+      "Durable, sturdy build that holds up to years of regular use",
+      "Ample storage capacity with many compartments/pockets",
+      "Good water resistance and waterproof storage features",
+      "Pleasant long-lasting scent that stays all day",
+      "Effective at lightening dark underarm discoloration"
     ],
     "pain_points": [
-      "Zipper can break easily even with light use",
-      "Lacks zippered interior storage pockets",
-      "Some units are delivered as open/used returned items",
-      "Scent can be overly strong and potent, triggering respiratory issues",
-      "Can cause bad rashes and irritation for sensitive skin"
+      "Zippers fail easily even with light use",
+      "Occasional shipment of used, returned items as new",
+      "Lack of zippered interior pockets for small items",
+      "Scent can be overly strong and potent for sensitive users",
+      "Causes allergic reactions and rashes in some users"
     ],
     "opportunities": [
-      "Upgrade zipper quality and hardware to improve durability over this competitor",
-      "Add requested zippered interior pockets to address a common unmet need",
-      "Offer both scented and mild/low-scent versions of deodorant to cover sensitive users",
-      "Strengthen quality control to prevent shipping out previously returned/used units"
+      "Upgrade zipper hardware for the backpack to improve durability and reduce early failure",
+      "Add more zippered interior pockets to the backpack to address an unmet storage need",
+      "Offer the deodorant in both scented and mild/unscented versions to accommodate sensitive users",
+      "Strengthen quality checks to prevent shipping used returned units to new customers"
     ],
     "alerts": [
-      "Skin irritation and rash reactions are a common negative issue for deodorant that requires formulation testing to avoid",
-      "Zipper failure is a persistent quality risk that can erode positive long-term durability perceptions for travel backpacks"
+      "Overly strong deodorant scent triggers asthma and allergic reactions, which can lead to negative reviews and safety concerns",
+      "Premature zipper failure in backpacks is a common quality issue that can erode long-term brand reputation"
     ]
   }
 }
